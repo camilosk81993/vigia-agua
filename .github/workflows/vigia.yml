@@ -1,0 +1,42 @@
+name: Vigia del Agua Yumbo
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+    inputs:
+      prueba:
+        description: "Mandar notificación de prueba al celular"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vigia
+  cancel-in-progress: false
+
+jobs:
+  vigilar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      TZ: America/Bogota
+      NTFY_TEMA: ${{ secrets.NTFY_TEMA }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Instalar OCR
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq tesseract-ocr tesseract-ocr-spa
+      - run: pip install -q requests pillow pytesseract
+      - name: Revisar
+        run: python vigia_nube.py ${{ inputs.prueba && '--prueba' || '' }}
+      - name: Guardar lo ya revisado
+        run: |
+          git config user.name "vigia-bot"
+          git config user.email "vigia-bot@users.noreply.github.com"
+          git add estado.json || true
+          git diff --cached --quiet || (git commit -q -m "estado" && git push -q)
