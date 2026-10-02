@@ -15,7 +15,6 @@ import sys
 import time
 import unicodedata
 import urllib.parse
-import xml.etree.ElementTree as ET
 from email.utils import parsedate_to_datetime
 
 import requests
@@ -85,6 +84,8 @@ def fechas_en_texto(texto_norm, hoy, ref=None):
                 fechas.append(f)
             except ValueError:
                 pass
+    if fechas:
+        return sorted(set(fechas))  # una fecha escrita completa manda sobre "el sábado", "mañana", etc.
     for m in re.finditer(r"\b(este|esta|el|proximo|para el)\s+(" + "|".join(DIAS_SEMANA) + r")\b", texto_norm):
         delta = (DIAS_SEMANA[m.group(2)] - hoy.weekday()) % 7
         fechas.append(hoy + dt.timedelta(days=delta))
@@ -96,7 +97,8 @@ def fechas_en_texto(texto_norm, hoy, ref=None):
 
 
 def horas_en_texto(texto):
-    pat = r"\b(\d{1,2}(?::\d{2})?\s*(?:a\.?\s?m\.?|p\.?\s?m\.?|horas|hrs))"
+    pat = (r"(?<![\d:])(\d{1,2}:\d{2}\s*(?:a\.?\s?m\.?|p\.?\s?m\.?|horas|hrs|h\b)?"
+           r"|\d{1,2}\s*(?:a\.?\s?m\.?|p\.?\s?m\.?))")
     vistos, out = set(), []
     for m in re.finditer(pat, texto, flags=re.I):
         h = re.sub(r"\s+", " ", m.group(1)).strip()
