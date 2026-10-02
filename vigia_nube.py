@@ -33,7 +33,7 @@ MESES = {"enero": 1, "febrero": 2, "marzo": 3, "abril": 4, "mayo": 5, "junio": 6
 
 CFG = {
     "noticias": ["Yumbo agua Emcali", "Yumbo corte de agua", "Yumbo suspensión acueducto",
-                 "Emcali cortes de agua Yumbo"],
+                 "Emcali cortes de agua Yumbo", "Yumbo sin agua", "Emcali mantenimiento Yumbo"],
     "instagram": ["emcalioficial"],
     "dias_maximos": 3,
     "palabras_agua": ["agua", "acueducto", "suspension", "suspensiones", "corte", "cortes",
@@ -166,16 +166,16 @@ def noticias():
     for url in urls:
         try:
             r = requests.get(url, headers={"User-Agent": UA}, timeout=25)
-            root = ET.fromstring(r.content)
+            entradas = leer_rss(r.text)
         except Exception as e:
             log("noticias falló", url[:60], e)
             continue
-        for it in root.iter("item"):
-            titulo = it.findtext("title") or ""
-            link = it.findtext("link") or ""
-            desc = re.sub("<[^>]+>", " ", it.findtext("description") or "")
+        for it in entradas:
+            titulo = it["title"]
+            link = it["link"]
+            desc = re.sub("<[^>]+>", " ", it["description"])
             try:
-                f = parsedate_to_datetime(it.findtext("pubDate"))
+                f = parsedate_to_datetime(it["pubDate"])
                 if f.tzinfo is None:
                     f = f.replace(tzinfo=dt.timezone.utc)
             except Exception:
@@ -188,15 +188,36 @@ def noticias():
     return items
 
 
+def leer_rss(xml):
+    """Lector tolerante: aguanta RSS mal formado (como el de Bing)."""
+    import html
+    out = []
+    for bloque in re.findall(r"<item\b.*?</item>", xml, flags=re.S | re.I):
+        def campo(tag):
+            m = re.search(rf"<{tag}\b[^>]*>(.*?)</{tag}>", bloque, flags=re.S | re.I)
+            if not m:
+                return ""
+            v = re.sub(r"^<!\[CDATA\[|\]\]>$", "", m.group(1).strip())
+            return html.unescape(v).strip()
+        out.append({"title": campo("title"), "link": campo("link"),
+                    "description": campo("description"), "pubDate": campo("pubDate")})
+    return out
+
+
 def instagram(estado):
     items = []
     for usuario in CFG["instagram"]:
         try:
-            r = requests.get(
-                "https://i.instagram.com/api/v1/users/web_profile_info/",
-                params={"username": usuario},
-                headers={"User-Agent": UA, "x-ig-app-id": "936619743392459",
-                         "Accept": "application/json"}, timeout=25)
+            r = None
+            for dominio in ("https://www.instagram.com", "https://i.instagram.com"):
+                r = requests.get(
+                    dominio + "/api/v1/users/web_profile_info/",
+                    params={"username": usuario},
+                    headers={"User-Agent": UA, "x-ig-app-id": "936619743392459",
+                             "Accept": "application/json", "Referer": "https://www.instagram.com/"},
+                    timeout=25)
+                if r.status_code == 200:
+                    break
             if r.status_code != 200:
                 log(f"Instagram @{usuario}: respondió {r.status_code} (bloqueo temporal)")
                 continue
