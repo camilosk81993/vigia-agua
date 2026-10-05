@@ -2,7 +2,7 @@
 """
 Vigía del Agua · Yumbo (versión nube)
 Corre en GitHub Actions cada 15 min, aunque tu PC esté apagado.
-Revisa noticias + Instagram de Emcali (lee las imágenes con OCR) y si hay
+Revisa noticias, la lista oficial de reparaciones del portal de Emcali + Instagram de Emcali (lee las imágenes con OCR) y si hay
 corte de agua en Yumbo te manda una notificación urgente al celular (ntfy).
 """
 import datetime as dt
@@ -20,6 +20,9 @@ from email.utils import parsedate_to_datetime
 import requests
 from PIL import Image
 
+from sismos import revisar_sismos, titulo_y_etiquetas
+from portal_emcali import revisar_portal, resumen_yumbo
+
 BASE = os.path.dirname(os.path.abspath(__file__))
 ESTADO = os.path.join(BASE, "estado.json")
 TEMA = os.environ.get("NTFY_TEMA", "").strip()
@@ -32,14 +35,15 @@ MESES = {"enero": 1, "febrero": 2, "marzo": 3, "abril": 4, "mayo": 5, "junio": 6
 
 CFG = {
     "noticias": ["Yumbo agua Emcali", "Yumbo corte de agua", "Yumbo suspensión acueducto",
-                 "Emcali cortes de agua Yumbo", "Yumbo sin agua", "Emcali mantenimiento Yumbo"],
+                 "Emcali cortes de agua Yumbo", "Yumbo sin agua", "Emcali mantenimiento Yumbo",
+                 "Yumbo corte de energía", "Yumbo sin luz Emcali", "Emcali mantenimiento energía Yumbo"],
     "instagram": ["emcalioficial"],
     "dias_maximos": 3,
-    "palabras_agua": ["agua", "acueducto", "suspension", "suspensiones", "corte", "cortes",
-                      "sin servicio", "interrupcion", "baja presion", "racionamiento", "carrotanque"],
     "palabras_yumbo": ["yumbo", "fray pena", "uribe uribe", "guacanda", "puerto isaacs",
                        "portales de yumbo", "acopi", "arroyohondo", "las cruces yumbo",
                        "belalcazar yumbo"],
+    "tipos_alerta": {"agua": True, "energia": True, "sismos": True},
+    "sismo_magnitud_min": 4.0, "sismo_intensidad_min": 3.0, "sismo_minutos": 60,
 }
 
 
@@ -116,28 +120,50 @@ def fragmento_yumbo(texto, palabras_yumbo, largo=260):
     return ("…" if ini > 0 else "") + frag + ("…" if len(texto) > ini + largo else "")
 
 
-def analizar(texto, cfg, hoy, ref=None):
-    """Decide si el texto anuncia un corte de agua en Yumbo."""
+PALABRAS_EVENTO = ["corte", "cortes", "suspension", "suspensiones", "suspende", "interrupcion",
+                   "sin servicio", "sin agua", "sin luz", "apagon", "racionamiento", "mantenimiento",
+                   "reparacion", "trabajos", "baja presion", "carrotanque", "quedaran sin"]
+PALABRAS_AGUA = ["agua", "acueducto", "hidric", "carrotanque", "racionamiento", "baja presion"]
+PALABRAS_ENERGIA = ["energia", "electric", "apagon", "sin luz", "corte de luz", "cortes de luz",
+                    "agua y luz", "luz y agua", "servicio de luz", "alumbrado"]
+
+
+def analizar(texto, cfg, hoy, ref=None, texto_tipos=None):
+    """Decide si el texto anuncia un corte de agua y/o de energía en Yumbo."""
     tn = normalizar(texto)
-    agua = [p for p in cfg["palabras_agua"] if re.search(r"\b" + re.escape(p), tn)]
     yumbo = [p for p in cfg["palabras_yumbo"] if p in tn]
-    if not agua or not yumbo:
+    if not yumbo:
         return None
-    # 'corte' solo, sin nada de agua, puede ser de energía
-    if set(agua) <= {"corte", "cortes", "suspension", "suspensiones", "sin servicio", "interrupcion"}:
-        if not re.search(r"\b(agua|acueducto|hidric)", tn):
-            return None
+
+    def hay(lista):
+        return any(re.search(r"\b" + re.escape(p), tn) for p in lista)
+    if not hay(cfg.get("palabras_evento", PALABRAS_EVENTO)):
+        return None
+    activos = cfg.get("tipos_alerta", {})
+
+    def tipos_en(t):
+        def h(lista):
+            return any(re.search(r"\b" + re.escape(p), t) for p in lista)
+        out = []
+        if activos.get("agua", True) and h(cfg.get("palabras_agua", PALABRAS_AGUA)):
+            out.append("agua")
+        if activos.get("energia", True) and h(cfg.get("palabras_energia", PALABRAS_ENERGIA)):
+            out.append("energia")
+        return out
+    tipos = (tipos_en(normalizar(texto_tipos)) if texto_tipos else []) or tipos_en(tn)
+    if not tipos:
+        return None
     fechas = fechas_en_texto(tn, hoy, ref)
     if fechas and max(fechas) < hoy:
         return None  # aviso viejo
     if not fechas and ref and (hoy - ref).days >= 1:
         return None  # noticia sin fecha y de ayer o antes: probablemente ya pasó
     return {
+        "tipos": tipos,
         "fechas": [f.isoformat() for f in fechas],
-        "horas": horas_en_texto(texto),
-        "resumen": fragmento_yumbo(texto, yumbo),
+        "horas": horas_en_texto(texto_tipos or texto),
+        "resumen": fragmento_yumbo(texto_tipos or texto, yumbo),
     }
-
 
 
 def fecha_bonita(alerta):
@@ -277,12 +303,16 @@ def enviar(alerta):
     if not TEMA:
         log("Falta el secreto NTFY_TEMA")
         return
-    partes = [fecha_bonita(alerta)]
-    if alerta.get("horas"):
-        partes.append(" a ".join(alerta["horas"][:2]))
-    cuerpo = " · ".join(partes) + "\n" + (alerta.get("titulo") or alerta.get("resumen") or "")
-    params = {"title": "Corte de agua en Yumbo", "message": cuerpo[:900], "priority": "5",
-              "tags": "droplet,warning", "click": alerta.get("url") or ""}
+    titulo, etiquetas = titulo_y_etiquetas(alerta)
+    if "sismo" in (alerta.get("tipos") or []):
+        cuerpo = alerta.get("resumen") or ""
+    else:
+        partes = [fecha_bonita(alerta)]
+        if alerta.get("horas"):
+            partes.append(" a ".join(alerta["horas"][:2]))
+        cuerpo = " · ".join(partes) + "\n" + (alerta.get("titulo") or alerta.get("resumen") or "")
+    params = {"title": titulo, "message": cuerpo[:900], "priority": "5",
+              "tags": etiquetas, "click": alerta.get("url") or ""}
     url = "https://ntfy.sh/" + TEMA
     if alerta.get("imagen"):
         r = requests.put(url, data=alerta["imagen"], params={**params, "filename": "aviso.jpg"}, timeout=40)
@@ -294,7 +324,7 @@ def enviar(alerta):
 # ───────────────────────── ciclo ─────────────────────────
 def main():
     if "--prueba" in sys.argv:
-        enviar({"fechas": [(dt.date.today() + dt.timedelta(days=1)).isoformat()],
+        enviar({"tipos": ["agua"], "fechas": [(dt.date.today() + dt.timedelta(days=1)).isoformat()],
                 "horas": ["8:00 a.m.", "6:00 p.m."], "url": "https://www.instagram.com/emcalioficial/",
                 "resumen": "Prueba desde la nube: así te llegará un aviso real aunque el PC esté apagado."})
         return
@@ -303,13 +333,22 @@ def main():
     except Exception:
         estado = {"vistos": {}, "alertas": []}
     hoy = dt.date.today()
-    items = noticias() + instagram(estado)
+    try:
+        portal = revisar_portal()
+    except Exception as e:
+        log("Portal de Emcali falló:", e)
+        portal = []
+    items = noticias() + portal + instagram(estado)
     nuevas = 0
     for it in items:
         if it["id"] in estado["vistos"]:
             continue
         estado["vistos"][it["id"]] = time.time()
-        res = analizar(it["texto"], CFG, hoy, it.get("ref"))
+        rel = [p for p in it.get("partes") or [] if any(y in normalizar(p) for y in CFG["palabras_yumbo"])]
+        ref = dt.date.fromisoformat(it["ref"]) if isinstance(it.get("ref"), str) else it.get("ref")
+        res = analizar(it["texto"], CFG, hoy, ref, "\n".join(rel) or None)
+        if res and rel:   # portal: el resumen son los puntos de Yumbo de la lista
+            res["resumen"] = resumen_yumbo("\n".join(rel), CFG["palabras_yumbo"], normalizar) or res["resumen"]
         if not res or repetida(res, it, estado):
             continue
         alerta = {**res, "fuente": it["fuente"], "url": it["url"], "titulo": it["titulo"],
@@ -321,6 +360,15 @@ def main():
         log("ALERTA", it["fuente"], it["url"])
     if len(estado["vistos"]) > 3000:
         estado["vistos"] = dict(sorted(estado["vistos"].items(), key=lambda kv: kv[1])[-2000:])
+    # sismos recientes que se sintieron en Yumbo
+    if CFG["tipos_alerta"].get("sismos", True):
+        vistos = estado.setdefault("sismos", [])
+        for a in revisar_sismos(vistos, CFG["sismo_magnitud_min"], CFG["sismo_minutos"],
+                                CFG["sismo_intensidad_min"], log=log):
+            enviar(a)
+            estado["alertas"].append(a)
+            nuevas += 1
+            log("ALERTA sismo", a["mag"], a["dist_km"], "km")
     estado["alertas"] = estado["alertas"][-30:]
     json.dump(estado, open(ESTADO, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     log(f"{len(items)} elementos revisados · {nuevas} alertas")
@@ -333,6 +381,8 @@ def repetida(res, it, estado):
     limite = (dt.datetime.now() - dt.timedelta(hours=48)).isoformat()
     for a in estado.get("alertas", []):
         if a.get("detectada", "") < limite:
+            continue
+        if not set(a.get("tipos") or ["agua"]) & set(res["tipos"]):
             continue
         if res["fechas"] and a.get("fechas") == res["fechas"]:
             return True
