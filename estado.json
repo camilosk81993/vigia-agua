@@ -2,7 +2,28 @@
  "vistos": {
   "8de235884a97a1c0": 1790920418.6755672,
   "e1b2c17922a2557f": 1790920418.6770859,
-  "3d1de458e79bca7a": 1790920418.677218
+  "3d1de458e79bca7a": 1790920418.677218,
+  "dbada020f838dfb1": 1791220188.2330804,
+  "952b01b55780acfe": 1791220188.23529,
+  "89111f3702bcd5f2": 1791220188.4842267,
+  "18f6e6ea64a1349f": 1791220188.4875996,
+  "493b2e508dc30809": 1791220188.4937408
  },
- "alertas": []
+ "alertas": [
+  {
+   "tipos": [
+    "agua"
+   ],
+   "fechas": [
+    "2026-10-05"
+   ],
+   "horas": [],
+   "resumen": "Acueducto: Acopi (Carrera 37 entre la calle 12 A y la calle 13); Juan Pablo - Yumbo (Calle 15 # 17 - 124, pendiente por reparación)",
+   "fuente": "Portal Emcali",
+   "url": "https://portalemcali.onrender.com/noticias-detalles?id=emcali-mantenimiento-acueducto-energia-alcantarillado-2026-10-05",
+   "titulo": "",
+   "detectada": "2026-10-05T12:09"
+  }
+ ],
+ "sismos": []
 }
