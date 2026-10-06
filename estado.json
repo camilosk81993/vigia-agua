@@ -7,7 +7,9 @@
   "952b01b55780acfe": 1791220188.23529,
   "89111f3702bcd5f2": 1791220188.4842267,
   "18f6e6ea64a1349f": 1791220188.4875996,
-  "493b2e508dc30809": 1791220188.4937408
+  "493b2e508dc30809": 1791220188.4937408,
+  "a2a05b0f5494d9ca": 1791302089.5997248,
+  "12a8f722d970d965": 1791302089.6007931
  },
  "alertas": [
   {
@@ -23,6 +25,23 @@
    "url": "https://portalemcali.onrender.com/noticias-detalles?id=emcali-mantenimiento-acueducto-energia-alcantarillado-2026-10-05",
    "titulo": "",
    "detectada": "2026-10-05T12:09"
+  },
+  {
+   "tipos": [
+    "agua"
+   ],
+   "fechas": [
+    "2026-10-06"
+   ],
+   "horas": [
+    "8:00 a.m.",
+    "8:00 p.m."
+   ],
+   "resumen": "Acueducto: Acopi (Carrera 38 con calle 13)",
+   "fuente": "Portal Emcali",
+   "url": "https://portalemcali.onrender.com/noticias-detalles?id=emcali-mantenimiento-acueducto-energia-alcantarillado-2026-10-06",
+   "titulo": "",
+   "detectada": "2026-10-06T10:54"
   }
  ],
  "sismos": []
