@@ -13,7 +13,11 @@
   "07fb20444a119820": 1791399693.193376,
   "420872494ecc3956": 1791399693.198917,
   "171d3e267b7701fe": 1791399693.1996832,
-  "4a40b810c3b7c56d": 1791399693.2008789
+  "4a40b810c3b7c56d": 1791399693.2008789,
+  "303a22e0e6fc3f8c": 1791478666.132804,
+  "4dc1661e45462568": 1791478666.133738,
+  "5281470fb974b20b": 1791478666.2875266,
+  "3fb68fa2e68cc33f": 1791478666.388836
  },
  "alertas": [
   {
@@ -46,6 +50,38 @@
    "url": "https://portalemcali.onrender.com/noticias-detalles?id=emcali-mantenimiento-acueducto-energia-alcantarillado-2026-10-06",
    "titulo": "",
    "detectada": "2026-10-06T10:54"
+  },
+  {
+   "tipos": [
+    "agua"
+   ],
+   "fechas": [
+    "2026-10-09"
+   ],
+   "horas": [
+    "8:00 a.m.",
+    "8:00 p.m."
+   ],
+   "resumen": "Zona industrial - Acopi Yumbo, en la calle  15 con carrera 39.",
+   "fuente": "Portal Emcali",
+   "url": "https://portalemcali.onrender.com/noticias-detalles?id=modernizacion-de-acueducto-viernes-9-de-octubre-de-2026",
+   "titulo": "",
+   "detectada": "2026-10-08T11:57"
+  },
+  {
+   "tipos": [
+    "agua",
+    "energia"
+   ],
+   "fechas": [
+    "2026-10-08"
+   ],
+   "horas": [],
+   "resumen": "Energía: Circuito Autopista (Grupo operativo cambiará cortacircuito en Acopi, para normalizar servicio) · Alcantarillado: Yumbo",
+   "fuente": "Portal Emcali",
+   "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-jueves-8-de-octubre-de-2026",
+   "titulo": "",
+   "detectada": "2026-10-08T11:57"
   }
  ],
  "sismos": []
