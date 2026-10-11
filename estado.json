@@ -22,7 +22,8 @@
   "7a0e9e0ca8d838d1": 1791558203.413134,
   "fed5f8493b1ab284": 1791558203.4133515,
   "9c97627d9ac64dcd": 1791576356.1862104,
-  "1fbd464939b87bf5": 1791649361.3371274
+  "1fbd464939b87bf5": 1791649361.3371274,
+  "1d0036c5d34d4dba": 1791731178.2566562
  },
  "alertas": [
   {
@@ -87,6 +88,20 @@
    "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-jueves-8-de-octubre-de-2026",
    "titulo": "",
    "detectada": "2026-10-08T11:57"
+  },
+  {
+   "tipos": [
+    "energia"
+   ],
+   "fechas": [
+    "2026-10-11"
+   ],
+   "horas": [],
+   "resumen": "Energía: Circuito Pedregal (Grupo operativo en revisión sobre el sector La Balastrera, en Yumbo, para dejar normalizado el servicio.); Circuito San Marcos (Se revisará en el sector Platanares, en la vía a Yumbo, para dejar normalizado el servicio.)",
+   "fuente": "Portal Emcali",
+   "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-domingo-11-de-octubre-de-2026",
+   "titulo": "",
+   "detectada": "2026-10-11T10:06"
   }
  ],
  "sismos": [
