@@ -24,7 +24,10 @@
   "9c97627d9ac64dcd": 1791576356.1862104,
   "1fbd464939b87bf5": 1791649361.3371274,
   "1d0036c5d34d4dba": 1791731178.2566562,
-  "12104ca6bb601bd5": 1791747119.595085
+  "12104ca6bb601bd5": 1791747119.595085,
+  "b55b86e62f39db04": 1791832491.965047,
+  "547f5b41b5d64b1f": 1791832491.9652257,
+  "5a2f01f25fd4bb99": 1791832492.2224405
  },
  "alertas": [
   {
@@ -103,6 +106,23 @@
    "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-domingo-11-de-octubre-de-2026",
    "titulo": "",
    "detectada": "2026-10-11T10:06"
+  },
+  {
+   "tipos": [
+    "agua"
+   ],
+   "fechas": [
+    "2026-10-13"
+   ],
+   "horas": [
+    "8:00 a.m.",
+    "11:00 p.m."
+   ],
+   "resumen": "Zona industrial - Acopi Yumbo, en la calle  12, hasta la calle 14, entre la carrera 37, hasta la carrera 40.",
+   "fuente": "Portal Emcali",
+   "url": "https://portalemcali.onrender.com/noticias-detalles?id=modernizacion-de-acueducto-martes-13-de-octubre-de-2026",
+   "titulo": "",
+   "detectada": "2026-10-12T14:14"
   }
  ],
  "sismos": [
