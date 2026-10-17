@@ -40,7 +40,8 @@
   "a262fda550f486cd": 1792023172.3807795,
   "ceed6ca4013c5ae4": 1792073759.4947004,
   "1834bd23e44d99c8": 1792073759.4954727,
-  "2a0406b9ac17a71e": 1792153428.4063845
+  "2a0406b9ac17a71e": 1792153428.4063845,
+  "9fccb85351e06419": 1792241792.9121828
  },
  "alertas": [
   {
@@ -153,6 +154,21 @@
    "url": "https://portalemcali.onrender.com/noticias-detalles?id=modernizacion-de-acueducto-miercoles-14-de-octubre-de-2026",
    "titulo": "",
    "detectada": "2026-10-13T10:25"
+  },
+  {
+   "tipos": [
+    "agua",
+    "energia"
+   ],
+   "fechas": [
+    "2026-10-17"
+   ],
+   "horas": [],
+   "resumen": "Acopi (Calle 15 # 23 - 06); Circuito Mulaló (En la vía a Yumbo, detrás de Cementos Argos.)",
+   "fuente": "Portal Emcali",
+   "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-sabado-17-de-octubre-de-2026",
+   "titulo": "",
+   "detectada": "2026-10-17T07:56"
   }
  ],
  "sismos": [
