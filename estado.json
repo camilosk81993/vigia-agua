@@ -43,7 +43,9 @@
   "2a0406b9ac17a71e": 1792153428.4063845,
   "9fccb85351e06419": 1792241792.9121828,
   "361fa43c9d9be525": 1792329846.0610266,
-  "4d558259384c7436": 1792329846.062197
+  "4d558259384c7436": 1792329846.062197,
+  "836feeca4322e4e7": 1792415197.044009,
+  "b59a223763e1d37b": 1792415197.2734454
  },
  "alertas": [
   {
@@ -171,6 +173,42 @@
    "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-sabado-17-de-octubre-de-2026",
    "titulo": "",
    "detectada": "2026-10-17T07:56"
+  },
+  {
+   "tipos": [
+    "agua"
+   ],
+   "fechas": [
+    "2026-10-20"
+   ],
+   "horas": [
+    "1:00 p.m.",
+    "6:00 p.m."
+   ],
+   "resumen": "Las Américas de Yumbo**, en la calle 6, hasta la calle 10, entre la carrera 16, hasta la carrera 19.",
+   "fuente": "Portal Emcali",
+   "url": "https://portalemcali.onrender.com/noticias-detalles?id=modernizacion-de-la-red-de-acueducto-martes-20-de-octubre-de-2026",
+   "titulo": "",
+   "detectada": "2026-10-19T08:06"
+  },
+  {
+   "tipos": [
+    "agua",
+    "energia"
+   ],
+   "fechas": [
+    "2026-08-07",
+    "2026-10-19"
+   ],
+   "horas": [
+    "8:00 a.m.",
+    "9:00 p.m."
+   ],
+   "resumen": "Yumbo",
+   "fuente": "Portal Emcali",
+   "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-lunes-19-de-octubre-de-2026",
+   "titulo": "",
+   "detectada": "2026-10-19T08:06"
   }
  ],
  "sismos": [
