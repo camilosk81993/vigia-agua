@@ -52,7 +52,9 @@
   "11565eba6b21bd73": 1792498231.7979374,
   "d97ba7894ec9f8e8": 1792498231.799495,
   "0756edfe09840b8e": 1792515511.5043566,
-  "188c19f2a52d35e1": 1792527486.195871
+  "188c19f2a52d35e1": 1792527486.195871,
+  "398e778724b6ba9f": 1792586089.5301127,
+  "e471e3dbcb66902c": 1792586089.530925
  },
  "alertas": [
   {
@@ -216,6 +218,24 @@
    "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-lunes-19-de-octubre-de-2026",
    "titulo": "",
    "detectada": "2026-10-19T08:06"
+  },
+  {
+   "tipos": [
+    "agua",
+    "energia"
+   ],
+   "fechas": [
+    "2026-10-21"
+   ],
+   "horas": [
+    "12:00",
+    "3:00 p.m."
+   ],
+   "resumen": "Circuito Yumbo Cobre (Grupo operativo de la red subterránea, revisará en la calle 35 N, con Av. 6 Bis, entre Santa Mónica Norte y Chipichape, para normalizar servicio.)",
+   "fuente": "Portal Emcali",
+   "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-miercoles-21-de-octubre-de-2026",
+   "titulo": "",
+   "detectada": "2026-10-21T07:34"
   }
  ],
  "sismos": [
