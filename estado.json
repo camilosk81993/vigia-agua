@@ -55,7 +55,9 @@
   "188c19f2a52d35e1": 1792527486.195871,
   "398e778724b6ba9f": 1792586089.5301127,
   "e471e3dbcb66902c": 1792586089.530925,
-  "44d654366da74512": 1792604330.054005
+  "44d654366da74512": 1792604330.054005,
+  "1d137fd7b9127216": 1792675136.8584716,
+  "9e5e0509ecd0ed23": 1792675136.8591375
  },
  "alertas": [
   {
@@ -237,6 +239,26 @@
    "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-miercoles-21-de-octubre-de-2026",
    "titulo": "",
    "detectada": "2026-10-21T07:34"
+  },
+  {
+   "tipos": [
+    "agua",
+    "energia"
+   ],
+   "fechas": [
+    "2026-10-22"
+   ],
+   "horas": [
+    "9:00 a.m.",
+    "10:00 p.m.",
+    "8:00 a.m.",
+    "8:00 p.m."
+   ],
+   "resumen": "Circuito Las Cruces (Grupo operativo reparará en la carrera 14 A con calle 2, en el barrio Las Cruces de Yumbo, para normalizar servicio.); Yumbo",
+   "fuente": "Portal Emcali",
+   "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-jueves-22-de-octubre-de-2026",
+   "titulo": "",
+   "detectada": "2026-10-22T08:18"
   }
  ],
  "sismos": [
