@@ -61,7 +61,9 @@
   "c5b94ea69920415a": 1792704910.1374955,
   "b579e7ada1d490b7": 1792748144.6574566,
   "6c575d7200c9a2b4": 1792765740.8674808,
-  "bcc980ff272a9082": 1792765740.8684225
+  "bcc980ff272a9082": 1792765740.8684225,
+  "64a10dc19d962b10": 1792846335.5919027,
+  "cfbaad64840cd418": 1792846335.5925877
  },
  "alertas": [
   {
@@ -263,6 +265,24 @@
    "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-jueves-22-de-octubre-de-2026",
    "titulo": "",
    "detectada": "2026-10-22T08:18"
+  },
+  {
+   "tipos": [
+    "agua",
+    "energia"
+   ],
+   "fechas": [
+    "2026-10-24"
+   ],
+   "horas": [
+    "7:00 a.m.",
+    "5:00 p.m."
+   ],
+   "resumen": "Acopi (Calle 15 # 32 - 598); Uribe Yumbo (Carrera 12 # 11 -  18)",
+   "fuente": "Portal Emcali",
+   "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-sabado-24-de-octubre-de-2026",
+   "titulo": "",
+   "detectada": "2026-10-24T07:52"
   }
  ],
  "sismos": [
