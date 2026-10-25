@@ -64,7 +64,9 @@
   "bcc980ff272a9082": 1792765740.8684225,
   "64a10dc19d962b10": 1792846335.5919027,
   "cfbaad64840cd418": 1792846335.5925877,
-  "20a74a212cadccce": 1792909562.517602
+  "20a74a212cadccce": 1792909562.517602,
+  "942ffde779824d95": 1792941348.9093041,
+  "402bb2e364893175": 1792941348.9102335
  },
  "alertas": [
   {
@@ -284,6 +286,24 @@
    "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-sabado-24-de-octubre-de-2026",
    "titulo": "",
    "detectada": "2026-10-24T07:52"
+  },
+  {
+   "tipos": [
+    "agua",
+    "energia"
+   ],
+   "fechas": [
+    "2026-10-25"
+   ],
+   "horas": [
+    "10:00 a.m.",
+    "3:00 p.m."
+   ],
+   "resumen": "Circuito Cementera (Grupo operativo revisará en el sector de Mulaló en Yumbo, para normalizar servicio.)",
+   "fuente": "Portal Emcali",
+   "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-domingo-25-de-octubre-de-2026",
+   "titulo": "",
+   "detectada": "2026-10-25T10:15"
   }
  ],
  "sismos": [
