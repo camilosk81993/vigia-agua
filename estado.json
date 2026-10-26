@@ -66,7 +66,10 @@
   "cfbaad64840cd418": 1792846335.5925877,
   "20a74a212cadccce": 1792909562.517602,
   "942ffde779824d95": 1792941348.9093041,
-  "402bb2e364893175": 1792941348.9102335
+  "402bb2e364893175": 1792941348.9102335,
+  "0deb2144f31f7a49": 1793019339.769048,
+  "848d8c491c5877b0": 1793019339.7702818,
+  "25ac56866c29179d": 1793019339.990964
  },
  "alertas": [
   {
@@ -304,6 +307,42 @@
    "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-domingo-25-de-octubre-de-2026",
    "titulo": "",
    "detectada": "2026-10-25T10:15"
+  },
+  {
+   "tipos": [
+    "agua"
+   ],
+   "fechas": [
+    "2026-10-27"
+   ],
+   "horas": [
+    "8:00 a.m.",
+    "9:00 p.m."
+   ],
+   "resumen": "Acopi Yumbo**, en la calle 12, hasta la calle 15, entre la carrera 25 A, hasta la carrera 26.",
+   "fuente": "Portal Emcali",
+   "url": "https://portalemcali.onrender.com/noticias-detalles?id=modernizacion-de-la-red-de-acueducto-martes-27-de-octubre-de-2026",
+   "titulo": "",
+   "detectada": "2026-10-26T07:55"
+  },
+  {
+   "tipos": [
+    "agua",
+    "energia"
+   ],
+   "fechas": [
+    "2026-08-07",
+    "2026-10-26"
+   ],
+   "horas": [
+    "8:00 a.m.",
+    "5:00 p.m."
+   ],
+   "resumen": "Yumbo",
+   "fuente": "Portal Emcali",
+   "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-lunes-26-de-octubre-de-2026",
+   "titulo": "",
+   "detectada": "2026-10-26T07:55"
   }
  ],
  "sismos": [
