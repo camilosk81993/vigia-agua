@@ -79,7 +79,9 @@
   "30772107a27157ef": 1793126454.259109,
   "efb6ca59ecf640f9": 1793196777.6648757,
   "4a8a2f73be2be67a": 1793196777.6657834,
-  "cd6022c6c856b8c2": 1793196781.915359
+  "cd6022c6c856b8c2": 1793196781.915359,
+  "adccd0b1b00503fa": 1793216006.5122335,
+  "66a90a34bd0d2175": 1793216006.7450328
  },
  "alertas": [
   {
@@ -390,6 +392,19 @@
    "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-miercoles-28-de-octubre-de-2026",
    "titulo": "",
    "detectada": "2026-10-28T09:13"
+  },
+  {
+   "tipos": [
+    "agua",
+    "energia"
+   ],
+   "fechas": [],
+   "horas": [],
+   "resumen": "¡Mirá, ve! EMCALI anuncia cortes de agua y luz en Cali y Yumbo: estarán hasta 15 horas sin servicio - Alerta. ¡Mirá, ve! EMCALI anuncia cortes de agua y luz en Cali y Yumbo: estarán hasta 15 horas sin servicio &nbsp;&nbsp; Alerta",
+   "fuente": "Noticias",
+   "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQazZXRUF1U29sNDlzYUFrRmJjRktPX0pUWDIyNVZKeWdXOWI3OEdMRWNDRF9XTXV5NlBYSm14bUVzbnhwbm8yNnVYOTlmSDdMa0c2dlMtenFkMGF1TkY0MmZRZzF5bTF0RTJDTnBXYUdkcUlNVXpXTmJ1SnJyXzRkS3ZJRmpWejVQcEE5RUlR0gGOAUFVX3lxTE1FQ3AxUEdURlBYWUtrSEFkb1Rnem16UWJNbUVpZGU5U0dYTmxJUU9JWHBaaVl0OUlfMjBxWWZ5cklTbVdXVk5MeDFCNHdNcURKMnlSMlFLb18xX3l5WTFpM0lhUmZMMzNJRDZoUHRRQ0FTUEpGWEEwQ1ViMDdpLTEwT3haTlhKSlZEQkdTcXc?oc=5",
+   "titulo": "¡Mirá, ve! EMCALI anuncia cortes de agua y luz en Cali y Yumbo: estarán hasta 15 horas sin servicio - Alerta",
+   "detectada": "2026-10-28T14:33"
   }
  ],
  "sismos": [
