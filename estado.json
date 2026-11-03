@@ -91,7 +91,10 @@
   "1d5b40b74007f9fe": 1793540829.3365135,
   "014d959415e49107": 1793571904.5445168,
   "d3367b2c9d612936": 1793644660.7790406,
-  "fa710efc8a1f88b6": 1793668517.9342792
+  "fa710efc8a1f88b6": 1793668517.9342792,
+  "c75ad98fc0b5cc69": 1793720528.2922535,
+  "f048bea5dad2fb6b": 1793720528.5427175,
+  "a10af9a94bf06794": 1793720528.5443423
  },
  "alertas": [
   {
@@ -415,6 +418,42 @@
    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQazZXRUF1U29sNDlzYUFrRmJjRktPX0pUWDIyNVZKeWdXOWI3OEdMRWNDRF9XTXV5NlBYSm14bUVzbnhwbm8yNnVYOTlmSDdMa0c2dlMtenFkMGF1TkY0MmZRZzF5bTF0RTJDTnBXYUdkcUlNVXpXTmJ1SnJyXzRkS3ZJRmpWejVQcEE5RUlR0gGOAUFVX3lxTE1FQ3AxUEdURlBYWUtrSEFkb1Rnem16UWJNbUVpZGU5U0dYTmxJUU9JWHBaaVl0OUlfMjBxWWZ5cklTbVdXVk5MeDFCNHdNcURKMnlSMlFLb18xX3l5WTFpM0lhUmZMMzNJRDZoUHRRQ0FTUEpGWEEwQ1ViMDdpLTEwT3haTlhKSlZEQkdTcXc?oc=5",
    "titulo": "¡Mirá, ve! EMCALI anuncia cortes de agua y luz en Cali y Yumbo: estarán hasta 15 horas sin servicio - Alerta",
    "detectada": "2026-10-28T14:33"
+  },
+  {
+   "tipos": [
+    "agua"
+   ],
+   "fechas": [
+    "2026-11-04"
+   ],
+   "horas": [
+    "8:00 a.m.",
+    "9:00 p.m.",
+    "6:00 p.m."
+   ],
+   "resumen": "Se llevará a cabo un trabajo de mejoramiento hidráulico en el tanque las Américas en el municipio de Yumbo.**; Las Américas en Yumbo,** en la calle 6 A hasta la calle 10, entre la carrera 16 hasta la carrera 19.",
+   "fuente": "Portal Emcali",
+   "url": "https://portalemcali.onrender.com/noticias-detalles?id=modernizacion-de-la-red-de-acueducto-miercoles-4-de-noviembre-de-2026",
+   "titulo": "",
+   "detectada": "2026-11-03T10:42"
+  },
+  {
+   "tipos": [
+    "agua",
+    "energia"
+   ],
+   "fechas": [
+    "2026-11-03"
+   ],
+   "horas": [
+    "8:00 a.m.",
+    "5:00 p.m."
+   ],
+   "resumen": "Acopi (Carrera 39 entre la calle 12 A hasta la calle 13); Yumbo",
+   "fuente": "Portal Emcali",
+   "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-martes-3-de-noviembre-de-2026",
+   "titulo": "",
+   "detectada": "2026-11-03T10:42"
   }
  ],
  "sismos": [
