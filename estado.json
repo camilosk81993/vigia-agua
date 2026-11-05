@@ -101,7 +101,9 @@
   "7e64d92848db650f": 1793755896.9148045,
   "5d88488fe404321e": 1793808001.908232,
   "ab3be545b3922989": 1793808001.909462,
-  "5ff04b7bf6a3422e": 1793808001.9114552
+  "5ff04b7bf6a3422e": 1793808001.9114552,
+  "240c6eb222cb7366": 1793897549.1837974,
+  "f25a5797c0072052": 1793897549.362352
  },
  "alertas": [
   {
@@ -461,6 +463,27 @@
    "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-martes-3-de-noviembre-de-2026",
    "titulo": "",
    "detectada": "2026-11-03T10:42"
+  },
+  {
+   "tipos": [
+    "agua",
+    "energia"
+   ],
+   "fechas": [
+    "2026-08-07",
+    "2026-11-05"
+   ],
+   "horas": [
+    "8:00 a.m.",
+    "11:00 p.m.",
+    "9:00 p.m.",
+    "12:00"
+   ],
+   "resumen": "Yumbo",
+   "fuente": "Portal Emcali",
+   "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-jueves-5-de-noviembre-de-2026",
+   "titulo": "",
+   "detectada": "2026-11-05T11:52"
   }
  ],
  "sismos": [
