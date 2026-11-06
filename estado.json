@@ -103,7 +103,8 @@
   "ab3be545b3922989": 1793808001.909462,
   "5ff04b7bf6a3422e": 1793808001.9114552,
   "240c6eb222cb7366": 1793897549.1837974,
-  "f25a5797c0072052": 1793897549.362352
+  "f25a5797c0072052": 1793897549.362352,
+  "504d233095d3ac3c": 1793984504.867085
  },
  "alertas": [
   {
@@ -484,6 +485,24 @@
    "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-jueves-5-de-noviembre-de-2026",
    "titulo": "",
    "detectada": "2026-11-05T11:52"
+  },
+  {
+   "tipos": [
+    "agua",
+    "energia"
+   ],
+   "fechas": [
+    "2026-11-06"
+   ],
+   "horas": [
+    "8:00 a.m.",
+    "5:00 p.m."
+   ],
+   "resumen": "Puerto Isaac en Yumbo (Calle 15 # 16 - 20); Yumbo",
+   "fuente": "Portal Emcali",
+   "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-viernes-6-de-noviembre-de-2026",
+   "titulo": "",
+   "detectada": "2026-11-06T12:01"
   }
  ],
  "sismos": [
