@@ -104,7 +104,8 @@
   "5ff04b7bf6a3422e": 1793808001.9114552,
   "240c6eb222cb7366": 1793897549.1837974,
   "f25a5797c0072052": 1793897549.362352,
-  "504d233095d3ac3c": 1793984504.867085
+  "504d233095d3ac3c": 1793984504.867085,
+  "b18308af1774ad3c": 1794062713.2353017
  },
  "alertas": [
   {
@@ -503,6 +504,21 @@
    "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-viernes-6-de-noviembre-de-2026",
    "titulo": "",
    "detectada": "2026-11-06T12:01"
+  },
+  {
+   "tipos": [
+    "agua",
+    "energia"
+   ],
+   "fechas": [
+    "2026-11-07"
+   ],
+   "horas": [],
+   "resumen": "Juan Pablo en Yumbo (Calle 15 # 15 - 75)",
+   "fuente": "Portal Emcali",
+   "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-sabado-7-de-noviembre-de-2026",
+   "titulo": "",
+   "detectada": "2026-11-07T09:45"
   }
  ],
  "sismos": [
