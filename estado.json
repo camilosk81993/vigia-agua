@@ -111,7 +111,9 @@
   "780fb0f8d9684b84": 1794151604.355102,
   "b2c5d26710ec3640": 1794258230.1802254,
   "b1a89aba03f27eed": 1794258230.1810248,
-  "14677e52dee1c9c3": 1794258230.1822395
+  "14677e52dee1c9c3": 1794258230.1822395,
+  "0139554247d4ea5b": 1794336742.3071542,
+  "fc4f0d86d7c1c374": 1794336742.5792158
  },
  "alertas": [
   {
@@ -557,6 +559,26 @@
    "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-lunes-9-de-noviembre-de-2026",
    "titulo": "",
    "detectada": "2026-11-09T16:03"
+  },
+  {
+   "tipos": [
+    "agua",
+    "energia"
+   ],
+   "fechas": [
+    "2026-11-10"
+   ],
+   "horas": [
+    "9:00 a.m.",
+    "9:00 p.m.",
+    "8:00 a.m.",
+    "5:00 p.m."
+   ],
+   "resumen": "Puerto Isaac Yumbo (Calle 15 D # 1 - 44) · Alcantarillado: Yumbo",
+   "fuente": "Portal Emcali",
+   "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-emcali-martes-10-de-noviembre-de-2026",
+   "titulo": "",
+   "detectada": "2026-11-10T13:52"
   }
  ],
  "sismos": [
