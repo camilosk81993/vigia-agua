@@ -117,7 +117,9 @@
   "12eb7c62de17e6fb": 1794423137.9147706,
   "83c1de67b2b49471": 1794423137.916118,
   "8869a0a6f86a2834": 1794502598.7975366,
-  "f91336605c7bfde2": 1794502598.7997406
+  "f91336605c7bfde2": 1794502598.7997406,
+  "c95482e7cabe2c87": 1794592589.121269,
+  "eb9b0c963a41f689": 1794592589.1221054
  },
  "alertas": [
   {
@@ -583,6 +585,25 @@
    "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-emcali-martes-10-de-noviembre-de-2026",
    "titulo": "",
    "detectada": "2026-11-10T13:52"
+  },
+  {
+   "tipos": [
+    "agua",
+    "energia"
+   ],
+   "fechas": [
+    "2026-11-13"
+   ],
+   "horas": [
+    "8:00 a.m.",
+    "8:00 p.m.",
+    "7:30 a.m."
+   ],
+   "resumen": "Uribe en Yumbo (Carrera 9 # 8 - 15); Fray Peña en Yumbo (Calle 25 D # 1 -30); Yumbo",
+   "fuente": "Portal Emcali",
+   "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-emcali-viernes-13-de-noviembre-de-2026",
+   "titulo": "",
+   "detectada": "2026-11-13T12:56"
   }
  ],
  "sismos": [
