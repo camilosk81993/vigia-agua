@@ -120,7 +120,8 @@
   "f91336605c7bfde2": 1794502598.7997406,
   "c95482e7cabe2c87": 1794592589.121269,
   "eb9b0c963a41f689": 1794592589.1221054,
-  "88547284033f717c": 1794674381.9456656
+  "88547284033f717c": 1794674381.9456656,
+  "d4f1027ac2e104e9": 1794753791.1487026
  },
  "alertas": [
   {
@@ -605,6 +606,21 @@
    "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-emcali-viernes-13-de-noviembre-de-2026",
    "titulo": "",
    "detectada": "2026-11-13T12:56"
+  },
+  {
+   "tipos": [
+    "agua",
+    "energia"
+   ],
+   "fechas": [
+    "2026-11-15"
+   ],
+   "horas": [],
+   "resumen": "Circuito Pedregal (Grupo operativo, cambiará transformador quemado en el barrio Belalcázar en Yumbo, para normalizar el servicio)",
+   "fuente": "Portal Emcali",
+   "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-emcali-domingo-15-de-noviembre-de-2026",
+   "titulo": "",
+   "detectada": "2026-11-15T09:43"
   }
  ],
  "sismos": [
