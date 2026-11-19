@@ -126,23 +126,12 @@
   "5aed250b146d47c0": 1794917577.0301971,
   "685c918258809460": 1794948843.0373566,
   "69cbd1a44a9f508b": 1795028649.3543115,
-  "d3231804ce762b6b": 1795050594.6200092
+  "d3231804ce762b6b": 1795050594.6200092,
+  "6d075a6c6be6c28a": 1795110021.5977175,
+  "d42d9278ed82b65e": 1795110021.6030495,
+  "2d3ac321f017bd75": 1795110021.6037433
  },
  "alertas": [
-  {
-   "tipos": [
-    "agua"
-   ],
-   "fechas": [
-    "2026-10-05"
-   ],
-   "horas": [],
-   "resumen": "Acueducto: Acopi (Carrera 37 entre la calle 12 A y la calle 13); Juan Pablo - Yumbo (Calle 15 # 17 - 124, pendiente por reparación)",
-   "fuente": "Portal Emcali",
-   "url": "https://portalemcali.onrender.com/noticias-detalles?id=emcali-mantenimiento-acueducto-energia-alcantarillado-2026-10-05",
-   "titulo": "",
-   "detectada": "2026-10-05T12:09"
-  },
   {
    "tipos": [
     "agua"
@@ -643,6 +632,24 @@
    "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-emcali-martes-17-de-noviembre-de-2026",
    "titulo": "",
    "detectada": "2026-11-17T07:12"
+  },
+  {
+   "tipos": [
+    "agua",
+    "energia"
+   ],
+   "fechas": [
+    "2026-11-19",
+    "2026-11-22"
+   ],
+   "horas": [
+    "7:30 a.m."
+   ],
+   "resumen": "Alcantarillado: Yumbo",
+   "fuente": "Portal Emcali",
+   "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-emcali-jueves-19-de-noviembre-de-2026",
+   "titulo": "",
+   "detectada": "2026-11-19T12:40"
   }
  ],
  "sismos": [
