@@ -132,26 +132,10 @@
   "2d3ac321f017bd75": 1795110021.6037433,
   "8f010df5021820f5": 1795132138.8286357,
   "dbec922450258fd5": 1795132138.829123,
-  "027cfd420a928d7e": 1795182242.7265706
+  "027cfd420a928d7e": 1795182242.7265706,
+  "50498e44cbabe996": 1795282982.3730228
  },
  "alertas": [
-  {
-   "tipos": [
-    "agua"
-   ],
-   "fechas": [
-    "2026-10-06"
-   ],
-   "horas": [
-    "8:00 a.m.",
-    "8:00 p.m."
-   ],
-   "resumen": "Acueducto: Acopi (Carrera 38 con calle 13)",
-   "fuente": "Portal Emcali",
-   "url": "https://portalemcali.onrender.com/noticias-detalles?id=emcali-mantenimiento-acueducto-energia-alcantarillado-2026-10-06",
-   "titulo": "",
-   "detectada": "2026-10-06T10:54"
-  },
   {
    "tipos": [
     "agua"
@@ -653,6 +637,22 @@
    "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-emcali-jueves-19-de-noviembre-de-2026",
    "titulo": "",
    "detectada": "2026-11-19T12:40"
+  },
+  {
+   "tipos": [
+    "agua",
+    "energia"
+   ],
+   "fechas": [
+    "2026-10-12",
+    "2026-11-21"
+   ],
+   "horas": [],
+   "resumen": "Acopi Yumbo (Carrera 23 con calle 12)",
+   "fuente": "Portal Emcali",
+   "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-mantenimientos-emcali-2026-11-21",
+   "titulo": "",
+   "detectada": "2026-11-21T12:43"
   }
  ],
  "sismos": [
