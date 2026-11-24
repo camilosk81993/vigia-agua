@@ -135,24 +135,12 @@
   "027cfd420a928d7e": 1795182242.7265706,
   "50498e44cbabe996": 1795282982.3730228,
   "a151a511432e4b55": 1795369217.9837794,
-  "fa6721ad5d03fbbb": 1795440128.897469
+  "fa6721ad5d03fbbb": 1795440128.897469,
+  "4061095e7f9a6a9a": 1795553807.6457245,
+  "54566b2e679e4050": 1795553807.6463616,
+  "7900d5259ab1b7e0": 1795553807.6473916
  },
  "alertas": [
-  {
-   "tipos": [
-    "agua",
-    "energia"
-   ],
-   "fechas": [
-    "2026-10-08"
-   ],
-   "horas": [],
-   "resumen": "Energía: Circuito Autopista (Grupo operativo cambiará cortacircuito en Acopi, para normalizar servicio) · Alcantarillado: Yumbo",
-   "fuente": "Portal Emcali",
-   "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-jueves-8-de-octubre-de-2026",
-   "titulo": "",
-   "detectada": "2026-10-08T11:57"
-  },
   {
    "tipos": [
     "energia"
@@ -653,6 +641,23 @@
    "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-mantenimientos-emcali-2026-11-22",
    "titulo": "",
    "detectada": "2026-11-22T12:40"
+  },
+  {
+   "tipos": [
+    "agua",
+    "energia"
+   ],
+   "fechas": [
+    "2026-11-24"
+   ],
+   "horas": [
+    "7:30 a.m."
+   ],
+   "resumen": "Alcantarillado: Yumbo",
+   "fuente": "Portal Emcali",
+   "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-mantenimientos-emcali-2026-11-24",
+   "titulo": "",
+   "detectada": "2026-11-24T15:56"
   }
  ],
  "sismos": [
