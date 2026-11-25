@@ -138,23 +138,11 @@
   "fa6721ad5d03fbbb": 1795440128.897469,
   "4061095e7f9a6a9a": 1795553807.6457245,
   "54566b2e679e4050": 1795553807.6463616,
-  "7900d5259ab1b7e0": 1795553807.6473916
+  "7900d5259ab1b7e0": 1795553807.6473916,
+  "d77599c7a6afa8e9": 1795614205.7394829,
+  "d502ffaadfb5176f": 1795614205.740144
  },
  "alertas": [
-  {
-   "tipos": [
-    "energia"
-   ],
-   "fechas": [
-    "2026-10-11"
-   ],
-   "horas": [],
-   "resumen": "Energía: Circuito Pedregal (Grupo operativo en revisión sobre el sector La Balastrera, en Yumbo, para dejar normalizado el servicio.); Circuito San Marcos (Se revisará en el sector Platanares, en la vía a Yumbo, para dejar normalizado el servicio.)",
-   "fuente": "Portal Emcali",
-   "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-y-mantenimientos-domingo-11-de-octubre-de-2026",
-   "titulo": "",
-   "detectada": "2026-10-11T10:06"
-  },
   {
    "tipos": [
     "agua"
@@ -658,6 +646,25 @@
    "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-mantenimientos-emcali-2026-11-24",
    "titulo": "",
    "detectada": "2026-11-24T15:56"
+  },
+  {
+   "tipos": [
+    "agua",
+    "energia"
+   ],
+   "fechas": [
+    "2026-11-25"
+   ],
+   "horas": [
+    "8:00 a.m.",
+    "5:00 p.m.",
+    "7:30 a.m."
+   ],
+   "resumen": "Energía: Circuito Mulaló (Grupo operativo reparará línea rota por caída de árbol, en un sector de Mulaló en Yumbo, para la normalización del servicio) · Alcantarillado: Yumbo",
+   "fuente": "Portal Emcali",
+   "url": "https://portalemcali.onrender.com/noticias-detalles?id=reparaciones-mantenimientos-emcali-2026-11-25",
+   "titulo": "",
+   "detectada": "2026-11-25T08:43"
   }
  ],
  "sismos": [
